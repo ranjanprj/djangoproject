@@ -9,7 +9,7 @@ on:
     paths:
     - djangoproject/**
     branches:         
-    - branch_name 
+    - feature 
  
 name: Build and Push to ECR
 
