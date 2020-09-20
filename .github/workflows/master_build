@@ -1,9 +1,9 @@
 # build.yml
 on:
-  action_name:
+  release:
     types: published
     branches:    
-      - branch_name
+      - master
     tags:        
       - 'v*.*.*'
 
