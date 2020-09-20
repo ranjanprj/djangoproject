@@ -19,7 +19,7 @@ env:
   AWS_DEFAULT_OUTPUT: ${{ secrets.AWS_DEFAULT_OUTPUT }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  CONTAINER_IMAGE: repository_name:${{ github.sha }}
+  CONTAINER_IMAGE: ${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
 
 jobs:
   build-and-push:
@@ -47,7 +47,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: repository_name
+        ECR_REPOSITORY:${{ secrets.ECR_REPOSITORY }}
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and push it to ECR 
