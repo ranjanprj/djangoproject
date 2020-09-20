@@ -1,6 +1,6 @@
 # build.yml
 on:
-  release:
+  action_name:
     types: published
     branches:    
       - branch_name
