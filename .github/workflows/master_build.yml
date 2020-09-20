@@ -1,10 +1,10 @@
 # build.yml
 on:
-  create:
+  release:
     branches:    
       - master_branch_name
     tags:        
-      -- 'v*.*.*'
+      - 'v*.*.*'
 
 name: Build and Push to ECR
 
