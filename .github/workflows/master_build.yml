@@ -1,6 +1,7 @@
 # build.yml
 on:
   release:
+    types: published
     branches:    
       - branch_name
     tags:        
