@@ -2,7 +2,7 @@
 on:
   release:
     branches:    
-      - master_branch_name
+      - branch_name
     tags:        
       - 'v*.*.*'
 
