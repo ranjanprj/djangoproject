@@ -1,10 +1,10 @@
-# build.yml
+# feature_build.yml
 on:
    pull_request:
     paths:
     - djangoproject/**
     branches:
-    - feature_branch_name
+    - feature
    push:
     paths:
     - djangoproject/**
