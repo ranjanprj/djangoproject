@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: djangoapp
+  namespace: default
 spec:
   ports:
   - port: 8000
@@ -14,8 +15,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: djangoapp
-  annotations:
-    fluxcd.io/automated: "true"
+  namespace: default
 spec:
   replicas: 1
   selector:
