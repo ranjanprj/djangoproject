@@ -2,35 +2,35 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: djangoapp
+  name: app
   namespace: default
 spec:
   ports:
   - port: 8000
   type: LoadBalancer
   selector:
-    app: djangoapp
+    app: app
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: djangoapp
+  name: app
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: djangoapp
+      app: app
   template:
     metadata:
       labels:
-        app: djangoapp
+        app: app
     spec:
       securityContext:
         runAsUser: 1000
       containers:
-      - name: djangoapp
-        image: djangoapp-image
+      - name: app
+        image: app-image
         env:
         - name: POSTGRES_USER
           valueFrom:
@@ -45,7 +45,7 @@ spec:
         # command: ['/bin/sh', '-c', 'python src/project/manage.py migrate --no-input']
       initContainers:
       - name: wait-for-database
-        image: djangoapp-image
+        image: app-image
         env:
         - name: POSTGRES_USER
           valueFrom:
@@ -68,7 +68,7 @@ spec:
         ports:
         - containerPort: 8000
       - name: migrate-database
-        image: djangoapp-image
+        image: app-image
         env:
         - name: POSTGRES_USER
           valueFrom: 
