@@ -1,36 +1,23 @@
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: app
-  namespace: default
-spec:
-  ports:
-  - port: 8000
-  type: LoadBalancer
-  selector:
-    app: app
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
-  namespace: default
+  name: {app_name}
+  namespace: {environment}
 spec:
-  replicas: 1
+  replicas: {replicas}
   selector:
     matchLabels:
-      app: app
+      app: {app_name}
   template:
     metadata:
       labels:
-        app: app
+        app: {app_name}
     spec:
       securityContext:
         runAsUser: 1000
       containers:
-      - name: app
-        image: app-image
+      - name: {app_name}
+        image: {app_image}
         env:
         - name: POSTGRES_USER
           valueFrom:
@@ -45,7 +32,7 @@ spec:
         # command: ['/bin/sh', '-c', 'python src/project/manage.py migrate --no-input']
       initContainers:
       - name: wait-for-database
-        image: app-image
+        image: {app_image}
         env:
         - name: POSTGRES_USER
           valueFrom:
@@ -68,7 +55,7 @@ spec:
         ports:
         - containerPort: 8000
       - name: migrate-database
-        image: app-image
+        image: {app_image}
         env:
         - name: POSTGRES_USER
           valueFrom: 
@@ -97,3 +84,20 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8000
+
+
+---
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {app_name}
+  namespace: {environment}
+spec:
+  ports:
+  - port: 8000
+  type: LoadBalancer
+  selector:
+    app: {app_name}
