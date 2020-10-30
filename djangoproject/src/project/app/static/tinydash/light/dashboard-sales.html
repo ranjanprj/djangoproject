@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -9,22 +8,22 @@
     <link rel="icon" href="favicon.ico">
     <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
     <!-- Simple bar CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/simplebar.css' %}">
+    <link rel="stylesheet" href="css/simplebar.css">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Icons CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/feather.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/select2.css' %}' ">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/dropzone.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/uppy.min.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/jquery.steps.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/jquery.timepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/quill.snow.css' %}">
+    <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/uppy.min.css">
+    <link rel="stylesheet" href="css/jquery.steps.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
     <!-- Date Range Picker CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/daterangepicker.css' %}">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/app-light.css' %}" id="lightTheme">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/app-dark.css' %}" id="darkTheme" disabled>
+    <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
   </head>
   <body class="vertical  light  ">
     <div class="wrapper">
@@ -55,7 +54,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="avatar avatar-sm mt-2">
-                <img src="https://usebootstrap.com/preview-no-frame/tinydash/dark/assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
+                <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -417,7 +416,7 @@
                           <p class="small text-muted mb-0">Conversion</p>
                           <div class="row align-items-center no-gutters">
                             <div class="col-auto">
-                              <span class="h3 mr-2 mb-0"> {{conversion}}% </span>
+                              <span class="h3 mr-2 mb-0"> 86.6% </span>
                             </div>
                             <div class="col-md-12 col-lg">
                               <div class="progress progress-sm mt-2" style="height:3px">
@@ -466,14 +465,13 @@
                 </div>
               </div>
               <!-- charts-->
-              <!-- <div class="row my-4">
+              <div class="row my-4">
                 <div class="col-md-12">
                   <div class="chart-box">
                     <div id="columnChart"></div>
                   </div>
-                </div> 
-              </div> -->
-               <!-- end section -->
+                </div> <!-- .col -->
+              </div> <!-- end section -->
               <!-- info small box -->
               <div class="row">
                 <div class="col-md-4">
@@ -983,38 +981,38 @@
         </div>
       </main> <!-- main -->
     </div> <!-- .wrapper -->
-    <script src="{% static 'tinydash/light/js/jquery.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/popper.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/moment.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/simplebar.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/daterangepicker.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.stickOnScroll.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/tinycolor-min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/config.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/d3.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/topojson.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps.all.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps-zoomto.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps.custom.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/Chart.min.js' %}"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script src="js/datamaps.all.min.js"></script>
+    <script src="js/datamaps-zoomto.js"></script>
+    <script src="js/datamaps.custom.js"></script>
+    <script src="js/Chart.min.js"></script>
     <script>
       /* defind global options */
       Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
       Chart.defaults.global.defaultFontColor = colors.mutedColor;
     </script>
-    <script src="{% static 'tinydash/light/js/gauge.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.sparkline.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/apexcharts.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/apexcharts.custom.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.mask.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/select2.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.steps.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.timepicker.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/dropzone.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/uppy.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/quill.min.js' %}"></script>
+    <script src="js/gauge.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/apexcharts.custom.js"></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
     <script>
       $('.select2').select2(
       {
@@ -1218,6 +1216,6 @@
         });
       }
     </script>
-    <script src="{% static 'tinydash/light/js/apps.js' %}"></script>
+    <script src="js/apps.js"></script>
   </body>
 </html>

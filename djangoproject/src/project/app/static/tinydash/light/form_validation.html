@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -9,22 +8,22 @@
     <link rel="icon" href="favicon.ico">
     <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
     <!-- Simple bar CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/simplebar.css' %}">
+    <link rel="stylesheet" href="css/simplebar.css">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Icons CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/feather.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/select2.css' %}' ">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/dropzone.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/uppy.min.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/jquery.steps.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/jquery.timepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/quill.snow.css' %}">
+    <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/uppy.min.css">
+    <link rel="stylesheet" href="css/jquery.steps.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
     <!-- Date Range Picker CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/daterangepicker.css' %}">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/app-light.css' %}" id="lightTheme">
-    <link rel="stylesheet" href="{% static 'tinydash/light/css/app-dark.css' %}" id="darkTheme" disabled>
+    <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
   </head>
   <body class="vertical  light  ">
     <div class="wrapper">
@@ -55,7 +54,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="avatar avatar-sm mt-2">
-                <img src="https://usebootstrap.com/preview-no-frame/tinydash/dark/assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
+                <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle">
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -367,495 +366,254 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
+              <h2 class="page-title">Form validation</h2>
+              <p class="text-muted">Provide valuable, actionable feedback to your users with HTML5 form validation</p>
               <div class="row">
-                <div class="col-md-6 col-xl-3 mb-4">
-                  <div class="card shadow bg-primary text-white border-0">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary-light">
-                            <i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
-                          </span>
-                        </div>
-                        <div class="col pr-0">
-                          <p class="small text-muted mb-0">Monthly Sales</p>
-                          <span class="h3 mb-0 text-white">$1250</span>
-                          <span class="small text-muted">+5.5%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-xl-3 mb-4">
-                  <div class="card shadow border-0">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-shopping-cart text-white mb-0"></i>
-                          </span>
-                        </div>
-                        <div class="col pr-0">
-                          <p class="small text-muted mb-0">Orders</p>
-                          <span class="h3 mb-0">1,869</span>
-                          <span class="small text-success">+16.5%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-xl-3 mb-4">
-                  <div class="card shadow border-0">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-filter text-white mb-0"></i>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <p class="small text-muted mb-0">Conversion</p>
-                          <div class="row align-items-center no-gutters">
-                            <div class="col-auto">
-                              <span class="h3 mr-2 mb-0"> {{conversion}}% </span>
-                            </div>
-                            <div class="col-md-12 col-lg">
-                              <div class="progress progress-sm mt-2" style="height:3px">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-xl-3 mb-4">
-                  <div class="card shadow border-0">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-activity text-white mb-0"></i>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <p class="small text-muted mb-0">AVG Orders</p>
-                          <span class="h3 mb-0">$80</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> <!-- end section -->
-              <div class="row align-items-center my-2">
-                <div class="col-auto ml-auto">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <label for="reportrange" class="sr-only">Date Ranges</label>
-                      <div id="reportrange" class="px-2 py-2 text-muted">
-                        <i class="fe fe-calendar fe-16 mx-2"></i>
-                        <span class="small"></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <button type="button" class="btn btn-sm"><span class="fe fe-refresh-ccw fe-12 text-muted"></span></button>
-                      <button type="button" class="btn btn-sm"><span class="fe fe-filter fe-12 text-muted"></span></button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <!-- charts-->
-              <!-- <div class="row my-4">
-                <div class="col-md-12">
-                  <div class="chart-box">
-                    <div id="columnChart"></div>
-                  </div>
-                </div> 
-              </div> -->
-               <!-- end section -->
-              <!-- info small box -->
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <div class="chart-widget">
-                        <div id="gradientRadial"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6 text-center">
-                          <p class="text-muted mb-0">Yesterday</p>
-                          <h4 class="mb-1">126</h4>
-                          <p class="text-muted mb-2">+5.5%</p>
-                        </div>
-                        <div class="col-6 text-center">
-                          <p class="text-muted mb-0">Today</p>
-                          <h4 class="mb-1">86</h4>
-                          <p class="text-muted mb-2">-5.5%</p>
-                        </div>
-                      </div>
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div> <!-- .col -->
-                <div class="col-md-4">
-                  <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <div class="chart-widget mb-2">
-                        <div id="radialbar"></div>
-                      </div>
-                      <div class="row items-align-center">
-                        <div class="col-4 text-center">
-                          <p class="text-muted mb-1">Cost</p>
-                          <h6 class="mb-1">$1,823</h6>
-                          <p class="text-muted mb-0">+12%</p>
-                        </div>
-                        <div class="col-4 text-center">
-                          <p class="text-muted mb-1">Revenue</p>
-                          <h6 class="mb-1">$6,830</h6>
-                          <p class="text-muted mb-0">+8%</p>
-                        </div>
-                        <div class="col-4 text-center">
-                          <p class="text-muted mb-1">Earning</p>
-                          <h6 class="mb-1">$4,830</h6>
-                          <p class="text-muted mb-0">+8%</p>
-                        </div>
-                      </div>
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div> <!-- .col -->
-                <div class="col-md-4">
-                  <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <p class="mb-0"><strong class="mb-0 text-uppercase text-muted">Today</strong></p>
-                      <h3 class="mb-0">$2,562.30</h3>
-                      <p class="text-muted">+18.9% Last week</p>
-                      <div class="chart-box mt-n5">
-                        <div id="lineChartWidget"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-4 text-center mt-3">
-                          <p class="mb-1 text-muted">Completions</p>
-                          <h6 class="mb-0">26</h6>
-                          <span class="small text-muted">+20%</span>
-                          <span class="fe fe-arrow-up text-success fe-12"></span>
-                        </div>
-                        <div class="col-4 text-center mt-3">
-                          <p class="mb-1 text-muted">Goal Value</p>
-                          <h6 class="mb-0">$260</h6>
-                          <span class="small text-muted">+6%</span>
-                          <span class="fe fe-arrow-up text-success fe-12"></span>
-                        </div>
-                        <div class="col-4 text-center mt-3">
-                          <p class="mb-1 text-muted">Conversion</p>
-                          <h6 class="mb-0">6%</h6>
-                          <span class="small text-muted">-2%</span>
-                          <span class="fe fe-arrow-down text-danger fe-12"></span>
-                        </div>
-                      </div>
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div> <!-- .col-md -->
                 <div class="col-md-6">
                   <div class="card shadow mb-4">
+                    <div class="card-header">
+                      <strong class="card-title">Default Validation</strong>
+                    </div>
                     <div class="card-body">
-                      <div class="card-title">
-                        <strong>Products</strong>
-                        <a class="float-right small text-muted" href="#!">View all</a>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div id="chart-box">
-                            <div id="donutChartWidget"></div>
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-8 mb-3">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <div class="invalid-feedback"> Please use a valid email </div>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Username</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                              </div>
+                              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                              <div class="invalid-feedback"> Please choose a username. </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                            <div class="valid-feedback"> Looks good! </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                            <div class="valid-feedback"> Looks good! </div>
                           </div>
                         </div>
-                        <div class="col-md-12">
-                          <div class="row align-items-center my-3">
-                            <div class="col">
-                              <strong>Cloud Server</strong>
-                              <div class="my-0 text-muted small">Global, Services</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+85%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback"> Please provide a valid city. </div>
                           </div>
-                          <div class="row align-items-center my-3">
-                            <div class="col">
-                              <strong>CDN</strong>
-                              <div class="my-0 text-muted small">Global, Services</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+75%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">State</label>
+                            <select class="custom-select" id="validationCustom04" required>
+                              <option selected disabled value="">Choose...</option>
+                              <option>...</option>
+                            </select>
+                            <div class="invalid-feedback"> Please select a valid state. </div>
                           </div>
-                          <div class="row align-items-center my-3">
-                            <div class="col">
-                              <strong>Databases</strong>
-                              <div class="my-0 text-muted small">Local, DC</div>
-                            </div>
-                            <div class="col-auto">
-                              <strong>+62%</strong>
-                            </div>
-                            <div class="col-3">
-                              <div class="progress" style="height: 4px;">
-                                <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom05">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback"> Please provide a valid zip. </div>
                           </div>
-                        </div> <!-- .col-md-12 -->
-                      </div> <!-- .row -->
-                    </div> <!-- .card-body -->
-                  </div> <!-- .card -->
-                </div> <!-- .col-md -->
+                        </div>
+                        <div class="form-group mb-3">
+                          <label for="validationTextarea">About your self</label>
+                          <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                          <div class="invalid-feedback"> Please enter a message in the textarea. </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                          <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                          <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+                          <div class="invalid-feedback">Example invalid feedback text</div>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                          <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-3">
+                          <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                          <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+                          <div class="invalid-feedback">More example invalid feedback text</div>
+                        </div>
+                        <div class="form-group mb-4">
+                          <label for="example-multiselect">Select your level</label>
+                          <select id="example-multiselect" multiple="" class="form-control" required>
+                            <option>Level 1</option>
+                            <option>Level 2</option>
+                            <option>Level 3</option>
+                            <option>Level 4</option>
+                            <option>Level 5</option>
+                          </select>
+                          <div class="invalid-feedback">Please select one option</div>
+                        </div>
+                        <div class="custom-file mb-3">
+                          <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                          <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                          <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck"> Agree to terms and conditions </label>
+                            <div class="invalid-feedback"> You must agree before submitting. </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                      </form>
+                    </div> <!-- /.card-body -->
+                  </div> <!-- /.card -->
+                </div> <!-- /.col -->
                 <div class="col-md-6">
                   <div class="card shadow mb-4">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <strong>Region</strong>
-                        <a class="float-right small text-muted" href="#!">View all</a>
-                      </div>
-                      <div class="map-box" style="position: relative; width: 350px; min-height: 130px; margin:0 auto;">
-                        <div id="dataMapUSA"></div>
-                      </div>
-                      <div class="row align-items-center h-100 my-2">
-                        <div class="col">
-                          <p class="mb-0">France</p>
-                          <span class="my-0 text-muted small">+10%</span>
-                        </div>
-                        <div class="col-auto text-right">
-                          <span>118</span><br />
-                          <div class="progress mt-2" style="height: 4px;">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center my-2">
-                        <div class="col">
-                          <p class="mb-0">Netherlands</p>
-                          <span class="my-0 text-muted small">+0.6%</span>
-                        </div>
-                        <div class="col-auto text-right">
-                          <span>1008</span><br />
-                          <div class="progress mt-2" style="height: 4px;">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center my-2">
-                        <div class="col">
-                          <p class="mb-0">Italy</p>
-                          <span class="my-0 text-muted small">+1.6%</span>
-                        </div>
-                        <div class="col-auto text-right">
-                          <span>67</span><br />
-                          <div class="progress mt-2" style="height: 4px;">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center my-2">
-                        <div class="col">
-                          <p class="mb-0">Spain</p>
-                          <span class="my-0 text-muted small">+118%</span>
-                        </div>
-                        <div class="col-auto text-right">
-                          <span>186</span><br />
-                          <div class="progress mt-2" style="height: 4px;">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="card-header">
+                      <strong class="card-title">Advanced Validation</strong>
                     </div>
-                  </div>
-                </div> <!-- .col -->
-              </div> <!-- / .row -->
-              <div class="row">
-                <!-- Recent orders -->
-                <div class="col-md-12">
-                  <h6 class="mb-3">Last orders</h6>
-                  <table class="table table-borderless table-striped">
-                    <thead>
-                      <tr role="row">
-                        <th>ID</th>
-                        <th>Purchase Date</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Total</th>
-                        <th>Payment</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="col">1331</th>
-                        <td>2020-12-26 01:32:21</td>
-                        <td>Kasimir Lindsey</td>
-                        <td>(697) 486-2101</td>
-                        <td>996-3523 Et Ave</td>
-                        <td>$3.64</td>
-                        <td> Paypal</td>
-                        <td>Shipped</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
+                    <div class="card-body">
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom3">First name</label>
+                            <input type="text" class="form-control" id="validationCustom3" value="Mark" required>
+                            <div class="valid-feedback"> Looks good! </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom4">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom4" value="Otto" required>
+                            <div class="valid-feedback"> Looks good! </div>
+                          </div>
+                        </div> <!-- /.form-row -->
+                        <div class="form-row">
+                          <div class="col-md-8 mb-3">
+                            <label for="exampleInputEmail2">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp1" required>
+                            <div class="invalid-feedback"> Please use a valid email </div>
+                            <small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="custom-phone">US Telephone</label>
+                            <input class="form-control input-phoneus" id="custom-phone" maxlength="14" required>
+                            <div class="invalid-feedback"> Please enter a correct phone </div>
+                          </div>
+                        </div> <!-- /.form-row -->
+                        <div class="form-group mb-3">
+                          <label for="address-wpalaceholder">Address</label>
+                          <input type="text" id="address-wpalaceholder" class="form-control" placeholder="Enter your address">
+                          <div class="valid-feedback"> Looks good! </div>
+                          <div class="invalid-feedback"> Badd address </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom33">City</label>
+                            <input type="text" class="form-control" id="validationCustom33" required>
+                            <div class="invalid-feedback"> Please provide a valid city. </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationSelect2">State</label>
+                            <select class="form-control select2" id="validationSelect2" required>
+                              <option value="">Select state</option>
+                              <optgroup label="Mountain Time Zone">
+                                <option value="AZ">Arizona</option>
+                                <option value="CO">Colorado</option>
+                                <option value="ID">Idaho</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="UT">Utah</option>
+                                <option value="WY">Wyoming</option>
+                              </optgroup>
+                              <optgroup label="Central Time Zone">
+                                <option value="AL">Alabama</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TX">Texas</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="WI">Wisconsin</option>
+                              </optgroup>
+                            </select>
+                            <div class="invalid-feedback"> Please select a valid state. </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="custom-zip">Zip code</label>
+                            <input class="form-control input-zip" id="custom-zip" autocomplete="off" maxlength="9" required>
+                            <div class="invalid-feedback"> Please provide a valid zip. </div>
+                          </div>
+                        </div>
+                        <div class="form-row mb-3">
+                          <div class="col-md-6 mb-3">
+                            <label for="date-input1">Date Picker</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control drgpicker" id="date-input1" value="04/24/2020" aria-describedby="button-addon2">
+                              <div class="input-group-append">
+                                <div class="input-group-text" id="button-addon-date"><span class="fe fe-calendar fe-16 mx-2"></span></div>
+                              </div>
                             </div>
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1156</th>
-                        <td>2020-04-21 00:38:38</td>
-                        <td>Melinda Levy</td>
-                        <td>(748) 927-4423</td>
-                        <td>Ap #516-8821 Vitae Street</td>
-                        <td>$4.18</td>
-                        <td> Paypal</td>
-                        <td>Pending</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
+                          <div class="col-md-3 mb-3">
+                            <label for="example-time">Time</label>
+                            <input class="form-control" id="example-time" type="time" name="time" required>
+                          </div>
+                          <div class="col-md-3 mx-auto mb-3">
+                            <p class="mb-3">Pick Up</p>
+                            <div class="custom-control custom-switch">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch1" required>
+                              <label class="custom-control-label" for="customSwitch1">Yes</label>
                             </div>
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1038</th>
-                        <td>2019-06-25 19:13:36</td>
-                        <td>Aubrey Sweeney</td>
-                        <td>(422) 405-2736</td>
-                        <td>Ap #598-7581 Tellus Av.</td>
-                        <td>$4.98</td>
-                        <td>Credit Card </td>
-                        <td>Processing</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
+                        </div>
+                        <div class="mb-3">
+                          <p class="mb-2">Payment</p>
+                          <div class="form-row">
+                            <div class="col-md-6">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="customControlValidation22" name="radio-stacked" required>
+                                <label class="custom-control-label" for="customControlValidation22">Card</label>
+                                <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="custom-control custom-radio mb-3">
+                                <input type="radio" class="custom-control-input" id="customControlValidation33" name="radio-stacked" required>
+                                <label class="custom-control-label" for="customControlValidation33">Paypal</label>
+                                <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                              </div>
                             </div>
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1227</th>
-                        <td>2021-01-22 13:28:00</td>
-                        <td>Timon Bauer</td>
-                        <td>(690) 965-1551</td>
-                        <td>840-2188 Placerat, Rd.</td>
-                        <td>$3.46</td>
-                        <td> Paypal</td>
-                        <td>Processing</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1956</th>
-                        <td>2019-11-11 16:23:17</td>
-                        <td>Kelly Barrera</td>
-                        <td>(117) 625-6737</td>
-                        <td>816 Ornare, Street</td>
-                        <td>$4.16</td>
-                        <td>Credit Card </td>
-                        <td>Shipped</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1669</th>
-                        <td>2021-04-12 07:07:13</td>
-                        <td>Kellie Roach</td>
-                        <td>(422) 748-1761</td>
-                        <td>5432 A St.</td>
-                        <td>$3.53</td>
-                        <td> Paypal</td>
-                        <td>Shipped</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="col">1909</th>
-                        <td>2020-05-14 00:23:11</td>
-                        <td>Lani Diaz</td>
-                        <td>(767) 486-2253</td>
-                        <td>3328 Ut Street</td>
-                        <td>$4.29</td>
-                        <td> Paypal</td>
-                        <td>Pending</td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <span class="text-muted sr-only">Action</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Edit</a>
-                              <a class="dropdown-item" href="#">Remove</a>
-                              <a class="dropdown-item" href="#">Assign</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div> <!-- / .col-md-3 -->
+                        </div>
+                        <div class="form-group mb-3">
+                          <label for="validationTextarea1">Note</label>
+                          <textarea class="form-control" id="validationTextarea1" placeholder="Take a note here" required="" rows="3"></textarea>
+                          <div class="invalid-feedback"> Please enter a message in the textarea. </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                          <input type="checkbox" class="custom-control-input" id="customControlValidation16" required="">
+                          <label class="custom-control-label" for="customControlValidation16"> Agree to terms and conditions</label>
+                          <div class="invalid-feedback"> You must agree before submitting. </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                      </form>
+                    </div> <!-- /.card-body -->
+                  </div> <!-- /.card -->
+                </div> <!-- /.col -->
               </div> <!-- end section -->
-            </div>
+            </div> <!-- /.col-12 col-lg-10 col-xl-10 -->
           </div> <!-- .row -->
         </div> <!-- .container-fluid -->
         <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
@@ -983,38 +741,23 @@
         </div>
       </main> <!-- main -->
     </div> <!-- .wrapper -->
-    <script src="{% static 'tinydash/light/js/jquery.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/popper.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/moment.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/simplebar.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/daterangepicker.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.stickOnScroll.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/tinycolor-min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/config.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/d3.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/topojson.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps.all.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps-zoomto.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/datamaps.custom.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/Chart.min.js' %}"></script>
-    <script>
-      /* defind global options */
-      Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
-      Chart.defaults.global.defaultFontColor = colors.mutedColor;
-    </script>
-    <script src="{% static 'tinydash/light/js/gauge.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.sparkline.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/apexcharts.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/apexcharts.custom.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.mask.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/select2.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.steps.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/jquery.timepicker.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/dropzone.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/uppy.min.js' %}"></script>
-    <script src="{% static 'tinydash/light/js/quill.min.js' %}"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
     <script>
       $('.select2').select2(
       {
@@ -1218,6 +961,6 @@
         });
       }
     </script>
-    <script src="{% static 'tinydash/light/js/apps.js' %}"></script>
+    <script src="js/apps.js"></script>
   </body>
 </html>
